@@ -1,6 +1,6 @@
 
 let arregloNumbers = [1,2,3,4,5];
-let arregloFruits = ['Fresa', 'Mora', 'Naranja', 'Coco'];
+let arregloFruits = ['Fresa', 'Mora', 'Naranja', 'Coco', 'Fresa'];
 
 
 function myForEach(array, callback){
@@ -35,10 +35,17 @@ function myMap(array, callback){
     return newArray;
 }
 
+function myFind(array, callback){
 
-// let misFrutas = myMap(arregloFruits, (fruta) =>{
-//      (fruta === 'Fresa') ? console.log(fruta) : 'false';
-// })
+    for(let i=0; i<array.length; i++){
+
+        if(callback(array[i]) === true){
+            return array[i];
+        }
+    }
+}
+
+
 
 
 // myForEach(arregloNumbers, (number, index) =>{
@@ -47,3 +54,10 @@ function myMap(array, callback){
 
 // let ar = myFilter(arregloFruits, (fruit) => fruit === 'Coco');
 // console.log(ar);
+
+// let misFrutas = myMap(arregloFruits, (fruta) =>{
+//      (fruta === 'Fresa') ? console.log(fruta) : 'false';
+// })
+
+// let frutaBuscada = myFind(arregloFruits, (fruta) => fruta.length < 5);
+// console.log(frutaBuscada);
