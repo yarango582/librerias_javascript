@@ -26,8 +26,20 @@ function myFilter(array, callback){
 }
 
 function myMap(array, callback){
-    
+
+    let newArray = [];
+
+    array.forEach(function (element, index, array){
+        newArray.push(callback(element));
+    })
+    return newArray;
 }
+
+
+// let misFrutas = myMap(arregloFruits, (fruta) =>{
+//      (fruta === 'Fresa') ? console.log(fruta) : 'false';
+// })
+
 
 // myForEach(arregloNumbers, (number, index) =>{
 //     console.log(`Indice actual: ${index} objeto: ${number}`);
