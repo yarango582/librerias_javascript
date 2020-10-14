@@ -1,6 +1,7 @@
 
 let arregloNumbers = [1,2,3,4,5];
 let arregloFruits = ['Fresa', 'Mora', 'Naranja', 'Coco', 'Fresa'];
+let letras = 'ABCDEFG';
 
 function myForEach(array, callback){
 
@@ -55,6 +56,17 @@ function myFindIndex(array, callback){
     }
 }
 
+function myContains(data, search){
+
+    for(let i=0; i<data.length; i++){
+
+        if(data.search(search) != -1){
+            return true;
+        }else{
+            return false;
+        }
+    }
+}
 
 
 // myForEach(arregloNumbers, (number, index) =>{
@@ -73,3 +85,5 @@ function myFindIndex(array, callback){
 
 // let frutaBuscada = myFind(arregloFruits, (fruta) => fruta.length < 5);
 // console.log(frutaBuscada);
+
+// console.log(myContains(letras, 'Z'))
