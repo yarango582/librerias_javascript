@@ -3,6 +3,7 @@ let arregloNumbers = [1,2,3,4,5];
 let arregloFruits = ['Fresa', 'Mora', 'Naranja', 'Coco', 'Fresa'];
 let letras = 'ABCDEFG';
 var stooges = [{name: 'moe', age: 40}, {name: 'larry', age: 50}, {name: 'curly', age: 60}];
+let arrayNumbers = [1, 2, 1, 0, 3, 1, 4];
 
 function myForEach(array, callback){
 
@@ -79,6 +80,23 @@ function myPluck(array, propertyName){
 
     return newArray;
 }
+
+function myWithout(array, data){
+
+    let newArray = [];
+
+    for(let i= 0; i<array.length; i++){
+
+        if(array[i] === data){
+            array.splice(i, 1);
+        }
+    }
+    newArray.push(array);
+    return newArray;
+}
+
+// let a =myWithout(arrayNumbers, 0);
+// console.log(a);
 
 // let arrayPrueba = myPluck(stooges, 'name');
 // console.log(arrayPrueba);
