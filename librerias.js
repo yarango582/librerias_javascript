@@ -2,6 +2,7 @@
 let arregloNumbers = [1,2,3,4,5];
 let arregloFruits = ['Fresa', 'Mora', 'Naranja', 'Coco', 'Fresa'];
 let letras = 'ABCDEFG';
+var stooges = [{name: 'moe', age: 40}, {name: 'larry', age: 50}, {name: 'curly', age: 60}];
 
 function myForEach(array, callback){
 
@@ -68,6 +69,19 @@ function myContains(data, search){
     }
 }
 
+function myPluck(array, propertyName){
+
+    let newArray = [];
+    
+    array.forEach((element) => {
+        newArray.push(element[propertyName]);
+    })
+
+    return newArray;
+}
+
+// let arrayPrueba = myPluck(stooges, 'name');
+// console.log(arrayPrueba);
 
 // myForEach(arregloNumbers, (number, index) =>{
 //     console.log(`Indice actual: ${index} objeto: ${number}`);
