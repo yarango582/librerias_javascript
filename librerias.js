@@ -58,16 +58,17 @@ function myFindIndex(array, callback){
     }
 }
 
-function myContains(data, search){
+function MyContains(array, dataSearch, index){
 
-    for(let i=0; i<data.length; i++){
+    for(let i = index; i<array.length; i++){
 
-        if(data.search(search) != -1){
-            return true;
+        if(array[i] == dataSearch){
+            return true
         }else{
-            return false;
+            return false
         }
     }
+
 }
 
 function myPluck(array, propertyName){
@@ -95,7 +96,7 @@ function myWithout(array, data){
     return newArray;
 }
 
-// let a =myWithout(arrayNumbers, 0);
+// let a =myWithout(arrayNumbers, 4);
 // console.log(a);
 
 // let arrayPrueba = myPluck(stooges, 'name');
